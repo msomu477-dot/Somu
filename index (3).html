@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1,
+        maximum-scale=1, user-scalable=no">
+  <title>Shadow Zone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="game"></div>
+
+  <header>
+    <div class="logo">SHADOW ZONE</div>
+    <div id="connection">CONNECTING...</div>
+  </header>
+
+  <section id="menu">
+    <div class="panel">
+      <p class="tag">ONLINE SURVIVAL GAME</p>
+      <h1>SHADOW<br><span>ZONE</span></h1>
+      <p>Enter the arena. Survive the darkness.</p>
+
+      <input id="playerName"
+             maxlength="16"
+             placeholder="Enter your name"
+             value="Runner">
+
+      <button id="playButton">FIND MATCH →</button>
+
+      <p id="message">
+        Up to 4 players · Requires internet
+      </p>
+
+      <div class="instructions">
+        <b>HOW TO PLAY</b>
+        <p>Move: WASD or joystick</p>
+        <p>Attack: Select an enemy and press FIRE</p>
+        <p>Survive: Stay inside the safe zone</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="hud" class="hidden">
+    <div class="card left">
+      ROOM <b id="room">---</b>
+      <small id="status">WAITING</small>
+    </div>
+
+    <div class="card center">
+      HEALTH
+      <div class="health">
+        <div id="healthFill"></div>
+      </div>
+      <b id="healthText">100 HP</b>
+    </div>
+
+    <div class="card right">
+      RUNNERS <b id="runners">0 / 4</b>
+      <small id="zoneText">SAFE ZONE</small>
+    </div>
+
+    <div id="notice"></div>
+
+    <div id="controls">
+      <div id="joystick">
+        <div id="stick"></div>
+      </div>
+      <button id="fireButton">FIRE</button>
+    </div>
+
+    <div id="leaderboard"></div>
+  </section>
+
+  <section id="result" class="hidden">
+    <div class="panel">
+      <p class="tag">MATCH COMPLETE</p>
+      <h2 id="resultTitle">GAME OVER</h2>
+      <p id="resultMessage"></p>
+      <button id="playAgain">PLAY AGAIN →</button>
+    </div>
+  </section>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script type="module" src="game.js"></script>
+
+</body>
+</html>

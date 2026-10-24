@@ -1,0 +1,260 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #080b14;
+  color: white;
+  font-family: Arial, sans-serif;
+  touch-action: none;
+}
+
+#game {
+  position: fixed;
+  inset: 0;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 18px;
+  background: linear-gradient(#050914, transparent);
+  pointer-events: none;
+}
+
+.logo {
+  color: #4de1ff;
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+#connection {
+  font-size: 11px;
+  color: #4be2b2;
+}
+
+#menu,
+#result {
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px;
+  background: #05091480;
+}
+
+.panel {
+  width: min(420px, 100%);
+  padding: 25px;
+  background: #0a1224ed;
+  border: 1px solid #28516a;
+  box-shadow: 0 0 50px #0008;
+}
+
+.tag {
+  color: #4de1ff;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-size: 43px;
+  line-height: 1;
+  margin: 22px 0;
+}
+
+h1 span {
+  color: #4de1ff;
+}
+
+.panel > p {
+  color: #b8cad8;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  margin-top: 12px;
+  background: #080d18;
+  border: 1px solid #36536a;
+  color: white;
+  font-size: 16px;
+}
+
+button {
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+#playButton,
+#playAgain {
+  width: 100%;
+  padding: 15px;
+  margin-top: 12px;
+  background: #4de1ff;
+  color: #06111a;
+}
+
+#message {
+  font-size: 13px;
+}
+
+.instructions {
+  margin-top: 22px;
+  border-top: 1px solid #294052;
+  padding-top: 14px;
+  color: #b8cad8;
+  font-size: 13px;
+}
+
+.instructions b {
+  color: #4de1ff;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#hud {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.card {
+  position: absolute;
+  top: 70px;
+  padding: 9px;
+  background: #07101ddd;
+  border: 1px solid #284357;
+  font-size: 10px;
+}
+
+.card b,
+.card small {
+  display: block;
+  margin-top: 5px;
+}
+
+.card b {
+  font-size: 15px;
+}
+
+.card small {
+  color: #4de1ff;
+}
+
+.left {
+  left: 8px;
+}
+
+.center {
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+}
+
+.right {
+  right: 8px;
+}
+
+.health {
+  height: 6px;
+  background: #40202b;
+  margin: 7px 0;
+}
+
+#healthFill {
+  width: 100%;
+  height: 100%;
+  background: #4be2b2;
+}
+
+#notice {
+  position: absolute;
+  top: 140px;
+  width: 100%;
+  text-align: center;
+  color: #4de1ff;
+  font-weight: bold;
+  text-shadow: 0 0 10px black;
+}
+
+#leaderboard {
+  position: absolute;
+  right: 8px;
+  top: 145px;
+  padding: 8px;
+  background: #07101ddd;
+  font-size: 12px;
+}
+
+#controls {
+  display: none;
+  position: absolute;
+  bottom: 25px;
+  left: 20px;
+  right: 20px;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: auto;
+}
+
+#joystick {
+  width: 105px;
+  height: 105px;
+  border: 2px solid #4de1ff88;
+  border-radius: 50%;
+  position: relative;
+  background: #102b3a99;
+  touch-action: none;
+}
+
+#stick {
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  left: 29px;
+  top: 29px;
+  background: #4de1ff99;
+  border: 2px solid #4de1ff;
+  border-radius: 50%;
+}
+
+#fireButton {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  color: white;
+  background: #e84269;
+  border: 2px solid #ff94aa;
+}
+
+@media (max-width: 700px) {
+  #controls {
+    display: flex;
+  }
+
+  .panel {
+    padding: 21px;
+  }
+}
